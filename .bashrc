@@ -1,3 +1,7 @@
+# Set default editor as vim
+export EDITOR=vim
+export VISUAL=vim
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
