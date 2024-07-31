@@ -1,0 +1,56 @@
+# Navigation
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias home='cd ~'
+
+# Listing files
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# File operations
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+
+# Grep
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+# System
+alias update='sudo apt update && sudo apt upgrade'
+alias ports='netstat -tulanp'
+
+# Misc
+alias h='history'
+alias j='jobs -l'
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T"'
+alias nowdate='date +"%d-%m-%Y"'
+
+# Git shortcuts
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gl='git pull'
+
+# Docker
+alias dps='docker ps'
+alias dimg='docker images'
+
+# Python
+alias py='python3'
+alias pip='pip3'
+
+# File content
+alias tf='tail -f'
+alias less='less -R'
+
+# Quick edit of config files
+alias vimrc='vim ~/.vimrc'
+alias bashrc='vim ~/.bashrc'
+alias zshrc='vim ~/.zshrc'
+alias aliases='vim ~/dotfiles/.aliases'
