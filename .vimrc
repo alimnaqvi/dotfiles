@@ -6,12 +6,13 @@ Plug 'morhetz/gruvbox'
 
 call plug#end()
 
-" disable vi compatibility (emulation of old bugs)
-set nocompatible
-
 " quick header inclusion
 iabbrev stdio #include <stdio.h>
 iabbrev stdlib #include <stdlib.h>
+iabbrev unistd #include <unistd.h>
+
+" disable vi compatibility (emulation of old bugs)
+set nocompatible
 
 " set UTF-8 encoding
 set enc=utf-8
@@ -106,3 +107,6 @@ inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
 inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
 inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
 inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
+
+" Enable auto-indenting when pressing Enter between braces (Allman style)
+inoremap <expr> <CR> getline('.') =~ '{\s*}$' ? '<CR><Esc>O' : '<CR>'
