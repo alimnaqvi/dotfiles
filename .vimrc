@@ -77,3 +77,32 @@ function! ToggleBackground()
         set background=dark
     endif
 endfunction
+
+" Improved Status Line
+set laststatus=2        " Always show status line
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ [BUFFER=%n]\ %{strftime('%c')}
+
+" Enhanced completion
+set complete+=kspell
+set completeopt=menuone,longest
+
+" Customized C Syntax
+autocmd FileType c setlocal cindent
+
+" Quick compilation and execution of C programs (using F9 key)
+autocmd FileType c nnoremap <F9> :w <bar> !gcc % -o %:r && ./%:r<CR>
+
+" Auto-closing brackets and quotes
+inoremap ( ()<Left>
+inoremap [ []<Left>
+inoremap { {}<Left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap " ""<Left>
+inoremap ' ''<Left>
+
+" Skip over closing bracket/quote if it's already there
+inoremap <expr> ) strpart(getline('.'), col('.')-1, 1) == ")" ? "\<Right>" : ")"
+inoremap <expr> ] strpart(getline('.'), col('.')-1, 1) == "]" ? "\<Right>" : "]"
+inoremap <expr> } strpart(getline('.'), col('.')-1, 1) == "}" ? "\<Right>" : "}"
+inoremap <expr> " strpart(getline('.'), col('.')-1, 1) == "\"" ? "\<Right>" : "\"\"\<Left>"
+inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\'\'\<Left>"
