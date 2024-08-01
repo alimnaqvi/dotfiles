@@ -67,7 +67,7 @@ set hlsearch
 " colorscheme wombat256
 
 colorscheme gruvbox
-set background=light  " dark or light as you prefer
+set background=dark  " dark or light as you prefer
 
 " To toggle between light and dark modes:
 nnoremap <F5> :call ToggleBackground()<CR>
