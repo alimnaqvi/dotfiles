@@ -28,7 +28,10 @@ set smartindent
 " configure tabwidth and insert spaces instead of tabs
 set tabstop=4        " tab width is 4 spaces
 set shiftwidth=4     " indent also with 4 spaces
-set expandtab        " expand tabs to spaces
+set noexpandtab        " no expand tabs to spaces
+
+" Show existing tab with 4 spaces width
+set softtabstop=4
 
 " wrap lines at 120 chars. 80 is somewaht antiquated with nowadays displays.
 set textwidth=120
@@ -77,6 +80,26 @@ function! ToggleBackground()
     else
         set background=dark
     endif
+endfunction
+
+" Enhance comment visibility
+augroup EnhanceComments
+    autocmd!
+    autocmd FileType c call EnhanceCComments()
+augroup END
+
+function! EnhanceCComments()
+    " Option 1: Change comment color to light blue
+    " highlight Comment ctermfg=117 guifg=#87d7ff
+
+    " Option 2: Make comments bold
+    " "highlight Comment cterm=bold gui=bold
+
+    " Option 3: Change background color of comments
+    " highlight Comment ctermbg=236 guibg=#303030
+
+    " Option 4: Combine color change and bold
+    highlight Comment ctermfg=117 guifg=#87d7ff cterm=bold gui=bold
 endfunction
 
 " Improved Status Line
