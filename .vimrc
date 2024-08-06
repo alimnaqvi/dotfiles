@@ -49,6 +49,9 @@ set showmatch
 " intelligent comments
 set comments=sl:/*,mb:\ *,elx:\ */
 
+" Disable automatic commenting on newline
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 " Enable mouse support
 set mouse=a
 
@@ -133,3 +136,38 @@ inoremap <expr> ' strpart(getline('.'), col('.')-1, 1) == "\'" ? "\<Right>" : "\
 
 " Enable auto-indenting when pressing Enter between braces (Allman style)
 inoremap <expr> <CR> getline('.') =~ '{\s*}$' ? '<CR><Esc>O' : '<CR>'
+
+" Single-line comments
+nnoremap <C-_> :call ToggleComment()<CR>
+vnoremap <C-_> :call ToggleComment()<CR>
+
+" Multi-line comments
+vnoremap <C-m> :call ToggleMultiLineComment()<CR>
+
+function! ToggleComment()
+    if getline('.') =~ '^\s*\/\/'
+        " Uncomment the line
+        execute 'normal! ^2x'
+    else
+        " Comment the line
+        execute 'normal! I// '
+    endif
+endfunction
+
+function! ToggleMultiLineComment()
+    let l:save = winsaveview()
+    let l:first_line = line("'<")
+    let l:last_line = line("'>")
+
+    if getline(l:first_line) =~ '^\s*\/\*' && getline(l:last_line) =~ '\*\/\s*$'
+        " Uncomment the block
+        execute l:first_line . 's/^\s*\/\* *//'
+        execute l:last_line . 's/ *\*\/\s*$//'
+    else
+        " Comment the block
+        execute l:first_line . 's/^/\/* /'
+        execute l:last_line . 's/$/ *\//'
+    endif
+
+    call winrestview(l:save)
+endfunction
