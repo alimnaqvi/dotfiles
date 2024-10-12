@@ -5,11 +5,16 @@ alias norminette='norminette -R CheckForbiddenSourceHeader -R CheckDefine'
 # mini-moulinette
 alias mini='~/mini-moulinette/mini-moul.sh'
 
+# Refress / activate new changes to .bashrc
+alias refbash='source ~/.bashrc'
+
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias home='cd ~'
+alias 42='cd ~/my_projects/42/core_curriculum/sync_42_curriculum'
+alias dotfiles='cd ~/dotfiles'
 
 # Listing files
 alias ll='ls -alFh'
