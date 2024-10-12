@@ -1,3 +1,10 @@
+# 42 complilation and norm
+alias cc='cc -Wall -Wextra -Werror'
+alias norminette='norminette -R CheckForbiddenSourceHeader -R CheckDefine'
+
+# mini-moulinette
+alias mini='~/mini-moulinette/mini-moul.sh'
+
 # Navigation
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -5,14 +12,14 @@ alias ....='cd ../../..'
 alias home='cd ~'
 
 # Listing files
-alias ll='ls -alF'
+alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
 
 # File operations
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+# alias rm='rm -i'
+# alias cp='cp -i'
+# alias mv='mv -i'
 
 # Grep
 alias grep='grep --color=auto'
@@ -43,17 +50,18 @@ alias dimg='docker images'
 
 # Python
 alias py='python3'
-alias pip='pip3'
+# alias pip='pip3'
 
 # File content
 alias tf='tail -f'
-alias less='less -R'
+# alias less='less -R'
 
 # Quick edit of config files
 alias vimrc='vim ~/.vimrc'
 alias bashrc='vim ~/.bashrc'
 alias zshrc='vim ~/.zshrc'
 alias aliases='vim ~/dotfiles/.aliases'
+alias gitconfig='vim ~/dotfiles/.gitconfig'
 
 # mkdir and cd into it
 function mkcd {

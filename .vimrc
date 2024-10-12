@@ -11,6 +11,9 @@ iabbrev stdio #include <stdio.h>
 iabbrev stdlib #include <stdlib.h>
 iabbrev unistd #include <unistd.h>
 
+"place yanked text into the global clipboard
+set clipboard=unnamedplus
+
 " disable vi compatibility (emulation of old bugs)
 set nocompatible
 
