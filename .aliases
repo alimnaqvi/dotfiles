@@ -5,8 +5,9 @@ alias norminette='norminette -R CheckForbiddenSourceHeader -R CheckDefine'
 # mini-moulinette
 alias mini='~/mini-moulinette/mini-moul.sh'
 
-# Refress / activate new changes to .bashrc
+# Refress / activate new changes to .bashrc and .zshrc
 alias refbash='source ~/.bashrc'
+alias refzsh='source ~/.zshrc'
 
 # Navigation
 alias ..='cd ..'
