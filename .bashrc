@@ -130,7 +130,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
+# francinette
 alias francinette=/home/a-victus/francinette/tester.sh
-
 alias paco=/home/a-victus/francinette/tester.sh
