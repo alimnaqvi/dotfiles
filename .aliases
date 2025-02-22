@@ -1,9 +1,6 @@
 # 42 complilation and norm
 alias cc='cc -Wall -Wextra -Werror'
-alias norminette='norminette -R CheckForbiddenSourceHeader -R CheckDefine'
-
-# mini-moulinette
-alias mini='~/mini-moulinette/mini-moul.sh'
+# alias norminette='norminette -R CheckForbiddenSourceHeader -R CheckDefine'
 
 # Refress / activate new changes to .bashrc and .zshrc
 alias refbash='source ~/.bashrc'
@@ -14,8 +11,10 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias home='cd ~'
-alias 42='cd ~/my_projects/42/core_curriculum/sync_42_curriculum'
+alias 42='cd ~/my_projects/42/core_curriculum/'
 alias dotfiles='cd ~/dotfiles'
+alias coding='cd /mnt/d/Coding/'
+alias 2025='cd /mnt/d/Onedrive/My\ Folder/Job\ \&\ job\ applications/2025'
 
 # Listing files
 alias ll='ls -alFh'
