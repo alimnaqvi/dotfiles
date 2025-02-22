@@ -1,3 +1,8 @@
 [alias]
   hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
   oneline = log --pretty=oneline
+[user]
+	email = alimohsinn@hotmail.com
+	name = Ali Mohsin Naqvi
+[init]
+	defaultBranch = main

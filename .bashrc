@@ -2,6 +2,9 @@
 export EDITOR=vim
 export VISUAL=vim
 
+# Set default browser
+export BROWSER=wslview
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -130,6 +133,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# francinette
-alias francinette=/home/a-victus/francinette/tester.sh
-alias paco=/home/a-victus/francinette/tester.sh
+
+# fnm
+FNM_PATH="/home/a-victus/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
