@@ -1,3 +1,6 @@
+# big-AGI
+alias big-agi='cd /home/a-victus/my_projects/LLMs/big-AGI && npm run dev &'
+
 # 42 complilation and norm
 alias cc='cc -Wall -Wextra -Werror'
 # alias norminette='norminette -R CheckForbiddenSourceHeader -R CheckDefine'
