@@ -81,3 +81,7 @@ function mkcd {
     mkdir $1 && cd $1
   fi
 }
+
+# mini-moulinette
+# alias mini='~/mini-moulinette/mini-moul.sh'
+
