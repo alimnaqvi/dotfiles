@@ -20,6 +20,9 @@ alias code='open -a "Visual Studio Code"'
 # 42-ValgrindContainer
 alias install_valgrind='bash ~/42-ValgrindContainer/install'
 
+# add ssh identity for github repo
+alias addid="ssh-add ~/.ssh/id_ed25519_personal"
+
 export PATH=$HOME/.brew/bin:$PATH
 PATH=$PATH:/Users/anaqvi
 PATH=$PATH:/Users/anaqvi/42-ValgrindContainer
