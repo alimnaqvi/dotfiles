@@ -1,11 +1,11 @@
 # big-AGI
-alias big-agi='cd /home/a-victus/my_projects/LLMs/big-AGI && npm run dev &'
+alias big-agi-dev='cd /home/a-victus/my_projects/LLMs/big-AGI && npm run dev &'
 
 # 42 complilation and norm
 alias cc='cc -Wall -Wextra -Werror'
 # alias norminette='norminette -R CheckForbiddenSourceHeader -R CheckDefine'
 
-# Refress / activate new changes to .bashrc and .zshrc
+# Refresh / activate new changes to .bashrc and .zshrc
 alias refbash='source ~/.bashrc'
 alias refzsh='source ~/.zshrc'
 
@@ -18,6 +18,7 @@ alias 42='cd ~/my_projects/42/core_curriculum/'
 alias dotfiles='cd ~/dotfiles'
 alias coding='cd /mnt/d/Coding/'
 alias 2025='cd /mnt/d/Onedrive/My\ Folder/Job\ \&\ job\ applications/2025'
+alias downloads='cd /mnt/c/Users/alimo/downloads'
 
 # Listing files
 alias ll='ls -alFh'
