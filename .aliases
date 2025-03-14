@@ -1,5 +1,6 @@
 # big-AGI
 alias big-agi-dev='cd /home/a-victus/my_projects/LLMs/big-AGI && npm run dev &'
+alias big-agi-backups='cd /mnt/d/Coding/LLMs/big-AGI/chat\ backups\ \(export\ all\)'
 
 # 42 complilation and norm
 alias cc='cc -Wall -Wextra -Werror'
