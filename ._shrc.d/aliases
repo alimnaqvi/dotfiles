@@ -7,9 +7,16 @@ alias upload='asciinema upload'
 alias agi-dev='cd /home/a-victus/my_projects/LLMs/big-AGI-vercel && npm run dev &'
 alias agi-backups='cd /mnt/d/Coding/LLMs/big-AGI/chat\ backups\ \(export\ all\)'
 
-# 42 complilation and norm
+# 42 compilation and norm
 alias cc='cc -Wall -Wextra -Werror'
 # alias norminette='norminette -R CheckForbiddenSourceHeader -R CheckDefine'
+
+# Create Dockerfile in the current folder
+alias create_valgrind='echo "FROM alpine:latest
+RUN apk add g++ valgrind make nano" > Dockerfile && docker build -t "valgrind:1.0" . && docker run -it -v $PWD:/tmp -w /tmp valgrind:1.0'
+
+# add ssh identity for github repo
+alias addid="ssh-add ~/.ssh/id_ed25519_personal"
 
 # Refresh / activate new changes to .bashrc and .zshrc
 alias refbash='source ~/.bashrc'
@@ -72,11 +79,11 @@ alias tf='tail -f'
 # alias less='less -R'
 
 # Quick edit of config files
-alias vimrc='vim ~/.vimrc'
-alias bashrc='vim ~/.bashrc'
-alias zshrc='vim ~/.zshrc'
-alias aliases='vim ~/dotfiles/.aliases'
-alias gitconfig='vim ~/dotfiles/.gitconfig'
+alias vimrc='${EDITOR} ~/.vimrc'
+alias bashrc='${EDITOR} ~/.bashrc'
+alias zshrc='${EDITOR} ~/.zshrc'
+alias aliases='${EDITOR} ~/dotfiles/._shrc.d/aliases'
+alias gitconfig='${EDITOR} ~/.gitconfig'
 
 # mkdir and cd into it
 function mkcd {

@@ -1,0 +1,4 @@
+if [[ $(uname -r) == *"WSL"* ]]; then # only apply for WSL
+    # Set default browser
+    export BROWSER=wslview
+fi
