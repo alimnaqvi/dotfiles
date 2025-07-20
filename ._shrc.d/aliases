@@ -1,3 +1,6 @@
+# check and log distro size
+alias distro_size='~/system_scripts/disc_usage/distro_size.sh'
+
 # asciinema
 alias rec='asciinema rec'
 alias play='asciinema play'
