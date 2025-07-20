@@ -1,3 +1,8 @@
+# asciinema
+alias rec='asciinema rec'
+alias play='asciinema play'
+alias upload='asciinema upload'
+
 # big-AGI
 alias agi-dev='cd /home/a-victus/my_projects/LLMs/big-AGI-vercel && npm run dev &'
 alias agi-backups='cd /mnt/d/Coding/LLMs/big-AGI/chat\ backups\ \(export\ all\)'
