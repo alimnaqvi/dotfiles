@@ -1,8 +1,8 @@
 # My Linux (and macOS) configuration files (dotfiles)
 
-This repository contains my personal `.bashrc`, `.zshrc`, `.gitconfig`, `.vimrc`, etc. The goal is easy portability to any new UNIX-like environment I am using, whether its bare metal, WSL, docker, or virtual machine, etc.
+This repository contains my personal `.bashrc`, `.zshrc`, `.gitconfig`, `.vimrc`, etc. The goal is easy portability to any UNIX-like environment I am using, whether its bare metal, WSL, docker, or virtual machine, etc.
 
-You are free to copy and use if you like.
+You are free to copy and use the contents of this repository if you like.
 
 ## Usage
 
@@ -26,7 +26,7 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 
 My policy is to keep the main `.bashrc` and `.zshrc` clutter-free and be able to use the exact same dotfile on all UNIX-like systems.
 
-The `.bashrc` and `.zshrc` files don't change across systems — they simply look for any files in the directories `~/dotfiles/._shrc.d/`, `~/.bashrc.d/`, and `~/.zshrc.d/`. All content in these files is loaded into the `.bashrc` and `.zshrc`.
+The `.bashrc` and `.zshrc` files don't change across systems — they simply look for any files in the directories `~/dotfiles/._shrc.d/`, `~/.bashrc.d/`, and `~/.zshrc.d/`. All content in these files is loaded into `.bashrc` and `.zshrc`.
 
 Files in the directory `~/dotfiles/._shrc.d/` contain conditionals to add any differing configurations, such as those that should only apply in WSL environment or macOS, etc.
 
