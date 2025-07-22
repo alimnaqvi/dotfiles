@@ -1,3 +1,6 @@
+# copy to clipboard on linux
+alias xc='xclip -sel clip'
+
 # check and log distro size
 alias distro_size='~/system_scripts/disc_usage/distro_size.sh'
 
