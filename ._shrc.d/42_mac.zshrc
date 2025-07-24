@@ -1,4 +1,4 @@
-if [[ $(uname -a) == "*Darwin*" ]]; then # only apply on macOS
+if [[ $(uname -a) == *"Darwin"* ]]; then # only apply on macOS
     # francinette
     alias francinette=/Users/anaqvi/francinette/tester.sh
     alias paco=/Users/anaqvi/francinette/tester.sh
