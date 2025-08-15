@@ -2,7 +2,10 @@
 
 This repository contains my personal `.bashrc`, `.zshrc`, `.gitconfig`, `.vimrc`, etc. The goal is easy portability to any UNIX-like environment I am using, whether its bare metal, WSL, docker, or virtual machine, etc.
 
-You are free to copy and use the contents of this repository if you like.
+<p>
+  You are free to copy and use the contents of this repository if you like.
+  <img src="https://page-views-counter-534232554413.europe-west1.run.app/view?src=github.com&src_uri=/alimnaqvi/dotfiles" style="display: none;" />
+</p>
 
 ## Usage
 
