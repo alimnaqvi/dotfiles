@@ -1,3 +1,15 @@
+# Activate python environment
+alias activate='source ./venv/bin/activate'
+
+# Send to trash (safer alternative to rm)
+alias trash='gio trash'
+
+# Add ESP32 toolchain to PATH
+alias get-idf='source ~/my_projects/embedded/esp-idf/export.sh'
+
+# Fix capslock delay manually
+alias fix-capslock='~/system_scripts/desktop_settings/fix-capslock-delay.sh'
+
 # copy to clipboard on linux
 alias xc='xclip -sel clip'
 
@@ -10,8 +22,9 @@ alias play='asciinema play'
 alias upload='asciinema upload'
 
 # big-AGI
-alias agi-dev='cd /home/a-victus/my_projects/LLMs/big-AGI-vercel && npm run dev &'
-alias agi-backups='cd /mnt/d/Coding/LLMs/big-AGI/chat\ backups\ \(export\ all\)'
+# alias agi-dev='cd /home/a-victus/my_projects/LLMs/big-AGI-vercel && npm run dev &'
+alias agi-regular-backup='~/system_scripts/backups/big-agi-regular-backup.sh'
+alias agi-backups-dir='cd /mnt/d/Coding/LLMs/big-AGI/chat\ backups\ \(export\ all\)'
 
 # 42 compilation and norm
 alias cc='cc -Wall -Wextra -Werror'
@@ -38,6 +51,10 @@ alias dotfiles='cd ~/dotfiles'
 alias coding='cd /mnt/d/Coding/'
 alias 2025='cd /mnt/d/Onedrive/My\ Folder/Job\ \&\ job\ applications/2025'
 alias downloads='cd /mnt/c/Users/alimo/downloads'
+alias job-txts='cd ~/my_projects/2025_job_skills_analysis/txt_based/txts/unhyphenated_txts'
+
+# Open in VS Code
+alias alimnaqvi='code ~/my_projects/alimnaqvi'
 
 # Listing files
 alias ll='ls -alFh'
