@@ -1,3 +1,6 @@
+# Clear orphaned packages and package cache
+alias clear='sudo apt autoremove && sudo apt clean && flatpak uninstall --unused'
+
 # Activate python environment
 alias activate='source ./venv/bin/activate'
 
@@ -6,6 +9,9 @@ alias trash='gio trash'
 
 # Add ESP32 toolchain to PATH
 alias get-idf='source ~/my_projects/embedded/esp-idf/export.sh'
+
+# Views analysis
+alias views_analysis='cd ~/my_projects/views_analysis && activate && python3 pandas_db_show.py && deactivate'
 
 # Fix capslock delay manually
 alias fix-capslock='~/system_scripts/desktop_settings/fix-capslock-delay.sh'
