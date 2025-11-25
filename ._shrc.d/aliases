@@ -1,5 +1,5 @@
 # Clear orphaned packages and package cache
-alias clear='sudo apt autoremove && sudo apt clean && flatpak uninstall --unused'
+alias clean='sudo apt autoremove && sudo apt clean && flatpak uninstall --unused'
 
 # Activate python environment
 alias activate='source ./venv/bin/activate'
@@ -10,8 +10,17 @@ alias trash='gio trash'
 # Add ESP32 toolchain to PATH
 alias get-idf='source ~/my_projects/embedded/esp-idf/export.sh'
 
+# Run job viewer server
+alias job-viewer-server-run='cd ~/my_projects/filter_and_view_jobs/ && activate && uvicorn backend.main:app'
+
+# Run script for querying gemini database csv
+alias query-jd-csv='python3 ~/system_scripts/cli_utils/csv_query_get_filename.py'
+
+# Show frequency analysis file
+alias freq-analysis-show='moderncsv ~/my_projects/2025_job_skills_analysis/html_based/freq_linkedin_all_developer.csv &>/dev/null &'
+
 # Views analysis
-alias views_analysis='cd ~/my_projects/views_analysis && activate && python3 pandas_db_show.py && deactivate'
+alias views-analysis-print='cd ~/my_projects/views_analysis && activate && python3 pandas_db_show.py && deactivate'
 
 # Fix capslock delay manually
 alias fix-capslock='~/system_scripts/desktop_settings/fix-capslock-delay.sh'
