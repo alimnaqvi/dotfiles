@@ -13,6 +13,9 @@ alias get-idf='source ~/my_projects/embedded/esp-idf/export.sh'
 # Run job viewer server
 alias job-viewer-server-run='cd ~/my_projects/filter_and_view_jobs/ && activate && uvicorn backend.main:app'
 
+# Run reactive-resume server
+alias reactive-resume-server-run='cd ~/my_projects/resume/Reactive-Resume && pnpm dev'
+
 # Run script for querying gemini database csv
 alias query-jd-csv='python3 ~/system_scripts/cli_utils/csv_query_get_filename.py'
 
