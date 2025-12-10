@@ -7,6 +7,9 @@ alias activate='source ./venv/bin/activate'
 # Send to trash (safer alternative to rm)
 alias trash='gio trash'
 
+# Quick speedtest logger
+alias quick_speedtest_log='python3 ~/my_projects/speedtest-logger/quick_speedtest_log.py'
+
 # Add ESP32 toolchain to PATH
 alias get-idf='source ~/my_projects/embedded/esp-idf/export.sh'
 
