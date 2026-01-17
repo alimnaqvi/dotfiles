@@ -10,6 +10,9 @@ alias trash='gio trash'
 # Ookla speedtest logger
 alias speedtest_logger='python3 ~/my_projects/speedtest-logger/speedtest_logger.py'
 
+# Extract relevant info from Reactive Resume (and thereby making it much shorter)
+alias extract_relevant_resume='python3 ~/my_projects/resume/json_resumes/scripts/extract_relevant.py'
+
 # Add ESP32 toolchain to PATH
 alias get-idf='source ~/my_projects/embedded/esp-idf/export.sh'
 
