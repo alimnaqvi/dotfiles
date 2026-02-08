@@ -16,6 +16,12 @@ alias minify-json='python3 ~/system_scripts/cli_utils/minify_json.py'
 # Extract relevant info from Reactive Resume (and thereby making it much shorter)
 alias relevant_resume_extract='python3 ~/my_projects/resume/json_resumes/scripts/extract_relevant.py'
 
+# Open a CSV file in moderncsv
+alias moderncsv-open='(){moderncsv $1 &>/dev/null &;}'
+
+# Open file with LibreOffice
+alias libreoffice-open='(){libreoffice $1 &>/dev/null &;}'
+
 # Add ESP32 toolchain to PATH
 alias get-idf='source ~/my_projects/embedded/esp-idf/export.sh'
 
