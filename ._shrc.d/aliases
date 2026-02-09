@@ -38,7 +38,7 @@ alias query-jd-csv='python3 ~/system_scripts/cli_utils/csv_query_get_filename.py
 alias freq-analysis-show='moderncsv ~/my_projects/2025_job_skills_analysis/html_based/freq_linkedin_all_developer.csv &>/dev/null &'
 
 # Views analysis
-alias views-analysis-print='cd ~/my_projects/views_analysis && activate && python3 pandas_db_show.py && deactivate'
+alias views-analysis-print='(){cd ~/my_projects/views_analysis && activate && python3 pandas_db_show.py $1 && deactivate;}'
 
 # Fix capslock delay manually
 alias fix-capslock='~/system_scripts/desktop_settings/fix-capslock-delay.sh'
