@@ -26,7 +26,8 @@ alias libreoffice-open='(){libreoffice $1 &>/dev/null &;}'
 alias get-idf='source ~/my_projects/embedded/esp-idf/export.sh'
 
 # Run job viewer server
-alias job-viewer-server-run='cd ~/my_projects/filter_and_view_jobs/ && activate && uvicorn backend.main:app'
+# Now defined locally
+# alias job-viewer-server-run='cd ~/my_projects/filter_and_view_jobs/ && activate && uvicorn backend.main:app'
 
 # Run reactive-resume server
 # alias reactive-resume-server-run='cd ~/my_projects/resume/Reactive-Resume && docker compose -f tools/compose/development.yml --env-file .env -p reactive-resume up -d && pnpm dev'
