@@ -13,6 +13,9 @@ alias speedtest_logger='python3 ~/my_projects/speedtest-logger/speedtest_logger.
 # Minify JSON
 alias minify-json='python3 ~/system_scripts/cli_utils/minify_json.py'
 
+# Minify HTML
+alias minify-html='python3 ~/system_scripts/cli_utils/minify_html_file.py'
+
 # Extract relevant info from Reactive Resume (and thereby making it much shorter)
 alias relevant_resume_extract='python3 ~/my_projects/resume/json_resumes/scripts/extract_relevant.py'
 
