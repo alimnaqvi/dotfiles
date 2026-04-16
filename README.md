@@ -12,7 +12,7 @@ This repository contains my personal `.bashrc`, `.zshrc`, `.gitconfig`, `.vimrc`
 Clone this repo in the home directory:
 
 ```bash
-cd ~ && git clone git@github.com:alimnaqvi/dotfiles.git
+cd ~ && git clone https://github.com/alimnaqvi/dotfiles.git
 ```
 
 The existing dotfiles (`~/.bashrc`, `~/.zshrc`, `~/.gitconfig`, `~/.vimrc`) must now be deleted and replaced with symbolic links to the files in this repository. Of course back up anything before deleting, and copy anything useful to the new ones.
