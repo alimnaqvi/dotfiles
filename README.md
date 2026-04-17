@@ -34,3 +34,20 @@ The `.bashrc` and `.zshrc` files don't change across systems — they simply loo
 Files in the directory `~/dotfiles/._shrc.d/` contain conditionals to add any differing configurations, such as those that should only apply in WSL environment or macOS, etc.
 
 Anything that should only apply locally (not carried across machines) should be included in the directories `~/.bashrc.d/` and `~/.zshrc.d/`.
+
+## `.vimrc` setup
+
+In order for [vim](https://www.vim.org/) to work properly with the `.vimrc` in this repository, follow the below steps. If this functionality is not needed, simply run `rm ~/.vimrc`.
+
+Install a vim plugin manager, e.g., [vim-plug](https://github.com/junegunn/vim-plug):
+
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+To install a vim color scheme, e.g., [gruvbox](https://github.com/morhetz/gruvbox), run `vim` and then run the following command inside vim:
+
+```
+:PlugInstall
+```
