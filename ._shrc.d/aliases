@@ -1,5 +1,36 @@
-# Clear orphaned packages and package cache
-alias clean='sudo apt autoremove && sudo apt clean && flatpak uninstall --unused'
+# Detect package manager and set aliases for package update
+if command -v dnf &> /dev/null; then
+    # Fedora, Rocky, Alma, RHEL
+    alias update='sudo dnf upgrade --refresh'
+    alias clean='sudo dnf autoremove && sudo dnf clean all && _clean_extras'
+
+elif command -v apt &> /dev/null; then
+    # Debian, Ubuntu, Pop!_OS, Mint
+    alias update='sudo apt update && sudo apt upgrade'
+    alias clean='sudo apt autoremove && sudo apt clean && _clean_extras'
+
+elif command -v pacman &> /dev/null; then
+    # Arch, Manjaro, EndeavourOS
+    alias update='sudo pacman -Syu'
+    alias clean='sudo pacman -Rns $(pacman -Qtdq) && _clean_extras'
+    
+elif command -v zypper &> /dev/null; then
+    # openSUSE
+    alias update='sudo zypper refresh && sudo zypper update'
+    alias clean='sudo zypper clean && _clean_extras'
+fi
+
+# Helper function for universal cleanup tasks (Flatpak, Trash)
+_clean_extras() {
+    if command -v flatpak &> /dev/null; then
+        echo "Cleaning Flatpaks..."
+        flatpak uninstall --unused -y
+    fi
+    if command -v gio &> /dev/null; then
+        echo "Emptying trash..."
+        gio trash --empty
+    fi
+}
 
 # Activate python environment
 alias activate='source ./venv/bin/activate'
@@ -118,7 +149,6 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # System
-alias update='sudo apt update && sudo apt upgrade'
 alias ports='netstat -tulanp'
 
 # Misc
