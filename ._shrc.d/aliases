@@ -100,7 +100,7 @@ alias upload='asciinema upload'
 
 # big-AGI
 # alias agi-dev='cd /home/a-victus/my_projects/LLMs/big-AGI-vercel && npm run dev &'
-alias agi-regular-backup='~/system_scripts/backups/big-agi-regular-backup.sh'
+alias agi-regular-backup='~/system_scripts/backups/big-agi-regular-backup.py'
 alias agi-backups-dir='cd /mnt/d/Coding/LLMs/big-AGI/chat\ backups\ \(export\ all\)'
 
 # 42 compilation and norm
